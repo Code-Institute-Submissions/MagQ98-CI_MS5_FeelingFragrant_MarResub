@@ -1,11 +1,11 @@
-/*Main font is Hind Siliguri and extra is Waterfall*/
+/*Main font is Hind Siliguri and extra is Waterfall and Roboto*/
 
 html {
     height: 100%;
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background: url('/media/waxmelts2.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -21,9 +21,26 @@ body {
     width: 1.5rem;
 }
 
+.color-bkgrd{
+    background-color: #f1d1dc;
+}
+
+.banner{
+    background-color: white;
+    border: 3px solid #f4aeb0;
+}
+
+.navbar{
+    background-color: #f1d1dc;
+    font-family: 'Roboto';
+    font-size: 1.25rem;
+}
+
 .logo-font {
     text-transform: uppercase;
     font-family: 'Waterfall';
+    text-decoration: underline solid #f4aeb0;
+    text-decoration-skip-ink: none;
 }
 
 .main-logo-link {
@@ -49,6 +66,9 @@ body {
 .btn-black:focus {
     background: #222;
     color: white;
+}
+.dropdown-item:hover{
+    background-color: #f4aeb0;
 }
 
 .text-black {
