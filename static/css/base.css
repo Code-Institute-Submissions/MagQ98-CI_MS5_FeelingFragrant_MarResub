@@ -91,6 +91,15 @@ body {
 	z-index: -1;
 }
 
+a.category-badge {
+    color: #fff !important;
+}
+
+span.badge:hover {
+    background-color: #f4aeb0;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
