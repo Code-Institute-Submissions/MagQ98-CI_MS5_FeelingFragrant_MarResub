@@ -17,9 +17,9 @@
                 Wax Items
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="wax-link">
-                <a href="" class="dropdown-item">All</a>
-                <a href="" class="dropdown-item">Wax melts</a>
-                <a href="" class="dropdown-item">Candles</a>
+                <a href="{% url 'products' %}?category=wax_melts,candles" class="dropdown-item">All</a>
+                <a href="{% url 'products' %}?category=wax_melts" class="dropdown-item">Wax melts</a>
+                <a href="{% url 'products' %}?category=candles" class="dropdown-item">Candles</a>
             </div>
         </li>
 
@@ -28,9 +28,9 @@
                 Fragrances
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="fragrance-link">
-                <a href="" class="dropdown-item">All</a>
-                <a href="" class="dropdown-item">Eau de Parfum</a>
-                <a href="" class="dropdown-item">Eau de Toilette</a>
+                <a href="{% url 'products' %}?category=eau_de_toilette,eau_de_parfum" class="dropdown-item">All</a>
+                <a href="{% url 'products' %}?category=eau_de_parfum" class="dropdown-item">Eau de Parfum</a>
+                <a href="{% url 'products' %}?category=eau_de_toilette" class="dropdown-item">Eau de Toilette</a>
             </div>
         </li>
 
@@ -39,10 +39,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
