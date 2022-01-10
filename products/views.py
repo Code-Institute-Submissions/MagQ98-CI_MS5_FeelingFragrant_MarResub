@@ -14,7 +14,7 @@ from .forms import ProductForm
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
-    logging.getLogger('gunicorn.error')
+    logger=logging.getLogger('gunicorn.error')
     logger.error("calling products")
     products = Product.objects.all()
     query = None
