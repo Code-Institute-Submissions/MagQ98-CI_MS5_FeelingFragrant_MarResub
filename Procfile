@@ -1,0 +1,1 @@
+web: gunicorn feeling-fragrant.wsgi:application
