@@ -1,1 +1,1 @@
-web: gunicorn feeling-fragrant.wsgi:application
+web: gunicorn feeling_fragrant.wsgi:application
