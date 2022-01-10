@@ -1,3 +1,4 @@
+import logging
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -13,6 +14,8 @@ from .forms import ProductForm
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
+    logger = logging.getLogger(__name__)
+    logger.info("calling products")
     products = Product.objects.all()
     query = None
     categories = None
