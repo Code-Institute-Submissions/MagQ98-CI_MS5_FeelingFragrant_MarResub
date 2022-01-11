@@ -1,3 +1,4 @@
+import json
 import logging
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
@@ -58,6 +59,7 @@ def all_products(request):
 
     logger.error('setting current sort')
     current_sorting = f'{sort}_{direction}'
+    logger.error(f'current sort {current_sorting}')
 
     context = {
         'products': products,
@@ -65,7 +67,7 @@ def all_products(request):
         'current_categories': categories,
         'current_sorting': current_sorting,
     }
-    logger.error('set context')
+    logger.error(f'set context {json.dumps(context)}')
     return render(request, 'products/products.html', context)
 
 
