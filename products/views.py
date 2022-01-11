@@ -17,8 +17,8 @@ def all_products(request):
     logger=logging.getLogger('gunicorn.error')
     logger.error("calling products")
     products = Product.objects.all()
-    query = None
-    categories = Category.objects
+    query = 'blah'
+    categories = []
     sort = None
     direction = None
 
