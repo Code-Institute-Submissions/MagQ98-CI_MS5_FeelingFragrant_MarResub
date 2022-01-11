@@ -1,108 +1,206 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Sweet Tooth
 
-Welcome MagQ98,
+My sincere apologies for the fact that this is incomplete. It is a work in progress and unfortunately due to time constraints and some other circumstances it is still very basic and contains errors in places but I decided to submit and receive some feedback for the future. Thank you for your time.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+User Experience
+======
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+### Target Audience
+<ul> 
+<li>People looking to purchase scented wax crafts such as wax melts or candles.</li>
+<li>People looking to support Irish crafts</li>
+</ul>
 
-## Gitpod Reminders
+### User Requirements
+<ul>
+<li> Links and functions that work as expected</li>
+<li> High quality product photos</li>
+<li> Product details and descriptions</li>
+<li> Bright, eye catching colours and presentation</li>
+<li> Easy and clear to use navigation and accessibility</li>
+<li> A trustworthy, risk free market place</li>
+<li> A secure check out</li>
+</ul>
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### User Stories
 
-`python3 -m http.server`
+#### First-time User 
+<ul>
+<li> I want to be able to register an account and track my purchases</li>
+<li> I want to be able to browse a wide variety of organised products for sale</li>
+<li> I want to be able to filter product ranges from low to high price etc</li>
+<li> I want to be able to scroll through products and click and view products as I please</li>
+<li> I want to be able to easily navigate the store and have options on which part of the store I want to browse</li>
+</ul>
 
-A blue button should appear to click: _Make Public_,
+#### Returning User
+<ul>
+<li> I would like to be able to browse a wider variety of products</li>
+<li> I would like to be able to sign up for a mailing list to receive updates about sales</li>
+<li> I would like to be able rate the products after purchasing</li>
+<li> I would like to be able to read other customers reviews of the store and products</li>
+<li> I would like to be able to read more about the seller and see their details</li>
+</ul>
 
-Another blue button should appear to click: _Open Browser_.
+Design
+======
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Structure
+<p>The site is designed in a well structured way which makes navigation easy for the user</p> 
+<p>The site is bright and eye catching</p>
+<p> The colours of the website complement the theme of the store and help keep your attention</p>
+<p>Upon clicking into the site the user is greeted with the homepage where they can get an immediate understanding of what the store is for and are presented with the option to shop now</p>
 
-A blue button should appear to click: _Make Public_,
+### Color
+<p>For the colour scheme I went with colours I felt best complemented the theme of the store. These being bright pinks and purples</p>
+<p>After deciding on my colour scheme I tested them on webaim to make sure the contrast between them was right</p>
 
-Another blue button should appear to click: _Open Browser_.
+### Typography
+<p>The hind siliguri, waterfall and roboto fonts were used for the store</p>
+<p>They are all elegant, pretty fonts that suit the feminine theme of the store</p> 
+<p>They are easy to read and look attractive</p>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Wireframes
+<details>
+<summary>Homepage</summary>
+<img src="media/images/homepage2.JPG" width="100%">
+</details>
+<details>
+<summary>Product page</summary>
+<img src="../media/images/products2.JPG" width="100%">
+</details>
+<details>
+<summary>Sign In page</summary>
+<img src="media/images/signin2.JPG" width="100%">
+</details>
+<details>
+<summary>Sign Up page</summary>
+<img src="media/images/signup2.JPG" width="100%">
+</details>
+<details>
+<summary>Check out page</summary>
+<img src="media/images/checkout.JPG" width="100%">
+</details>
+<details>
+<summary>Shopping Bag</summary>
+<img src="media/images/shoppingbag.JPG" width="100%">
+</details>
 
-To log into the Heroku toolbelt CLI:
+Features
+======
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Navigation Bar
+<ul>
+<li>Featured on all Web pages</li>
+<li>Utilises hyperlinks for users to easily navigate</li>
+<li>Features click able links to easily find what you are looking for</li>
+<li>Utilises a search bar so users can find what they are looking for easier</li>
+</ul>
+<img src="media/images/navbar.JPG" alt="Navigation Bar" style="max-width:100%;">
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Home Page
+<ul>
+<li>Displays the main focus of the store and offers users and easy way to start shopping</li>
+<li>Gives users an impression of what to expect from the rest of the store</li>
+<li>Allows users to register or log in</li>
+<li>Allows users to view their basket</li>
+</ul>
+<img src="media/images/homepage.JPG" alt="Home page" style="max-width:100%;">
 
-------
+### Sign In/Out
+<ul>
+<li>Allows users to sign in/out of their account</li>
+<li>Allows users to make secure purchases and view their purchase history</li>
+</ul>
+<img src="media/images/signinpage.JPG" alt="Sign In" style="max-width:100%;">
+<img src="media/images/signoutpage.JPG" alt="Sign Out" style="max-width:100%;">
 
-## Release History
+### Product page
+<ul>
+<li>Allows users to view all products or to sort how they would like to see them eg. Price high to low</li>
+</ul>
+<img src="media/images/products.JPG" alt="Sign Up" style="max-width:100%;">
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Checkout
+<ul>
+<li>Allows users to checkout with the products they'd like to buy securely</li>
+</ul>
+<img src="media/images/checkout.JPG" alt="Sign Up" style="max-width:100%;">
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Future features to implement
+<ul>
+<li>Plans to add a footer to create accessibility between the store and its different social media channels</li>
+<li>Plans to create a business on facebook with links to the site and products</li>
+<li>Plans to create a review option for all products</li>
+<li>Plans to include a comment section for users to share their opinions on products</li>
+</ul>
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Technologies Used
+======
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Languages
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Javascript</li>
+<li>Python</li>
+</ul>
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Frameworks & Tools
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+<ul>
+<li>Balsamiq</li>
+<li>Git</li>
+<li>GitHub</li>
+<li>Gitpod</li>
+<li>Google Fonts</li>
+<li>Django</li>
+<li>PostgreSQL</li>
+<li>Bootstrap v5.0</li>
+<li>Favicon.io</li>
+<li>Hover.css:</li>
+</ul>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Testing
+======
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+<p>Due to time constraints I was not able to fully test this project</p>
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+Bugs
+======
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+<p>When I deployed my project through Heroku, It created an issue where the homepage is able to load but you cant access any of the products pages anymore as you get a server 500 error</p>
+<p>I have not been able to find a resolution to this problem</p>
+<p>When running the server through gitpod, no images appear</p>
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Deployment
+======
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+The website was deployed using Heroku using the following steps:
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+<p>Use the "pip freeze -> requiremnts.txt" command in the terminal</p>
+<p>Create a Heroku account</p>
+<p>Click the New button in the upper right corner and select "create new app"</p>
+<p>Choose a unique app name, region and click "Create app"</p>
+<p>Go to the Settings tab, add the heroku/python buildpack</p>
+<p>Go to the "deploy" tab and pick GitHub as a deployment method</p>
+<p>Search for a repository to connect to</p>
+<p>Go to the manual deploy section and click the "Deploy Branch" button</p>
+<p>Wait for the app to build and then click on the "View" link</p>
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+The live link can be found here - https://feeling-fragrant.herokuapp.com/
 
-------
+Credits
+======
 
-## FAQ about the uptime script
+### Content and Media
 
-**Why have you added this script?**
+<p>https://burrenperfumery.com/</p>
+<p>https://www.thegoodgarden.ie/</p>
+<p>https://www.thelittlewaxcompany.ie/</p>
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Acknowledgements
 
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+While making this project, I heavily relied on the tutorials provided by Code Institute, specifically the Boutique Ado tutorial
+I would like to thank my mentor and tutor for continuous helpful feedback

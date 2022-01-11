@@ -1,4 +1,3 @@
-import logging
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -14,18 +13,14 @@ from .forms import ProductForm
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
-    logger=logging.getLogger('gunicorn.error')
-    logger.error("calling products")
     products = Product.objects.all()
-    query = 'blah'
-    categories = []
+    query = None
+    categories = None
     sort = None
     direction = None
 
     if request.GET:
-        logger.error('request was a get')
         if 'sort' in request.GET:
-            logger.error('sort in request')
             sortkey = request.GET['sort']
             sort = sortkey
             if sortkey == 'name':
@@ -40,14 +35,11 @@ def all_products(request):
             products = products.order_by(sortkey)
 
         if 'category' in request.GET:
-            logger.error('sort in category')
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
-            logger.error('finished categories')
 
         if 'q' in request.GET:
-            logger.error('sort in q')
             query = request.GET['q']
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
@@ -56,10 +48,7 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
-    logger.error('setting current sort')
     current_sorting = f'{sort}_{direction}'
-    logger.error(f'current sort {current_sorting}')
-
     context = {
         'products': products,
         'search_term': query,
