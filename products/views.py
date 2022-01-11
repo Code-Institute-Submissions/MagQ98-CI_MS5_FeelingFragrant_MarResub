@@ -18,7 +18,7 @@ def all_products(request):
     logger.error("calling products")
     products = Product.objects.all()
     query = None
-    categories = None
+    categories = Category.objects
     sort = None
     direction = None
 
