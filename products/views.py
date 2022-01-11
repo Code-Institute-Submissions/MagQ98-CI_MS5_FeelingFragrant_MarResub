@@ -66,7 +66,6 @@ def all_products(request):
         'current_categories': categories,
         'current_sorting': current_sorting,
     }
-    logger.error(f'set context {context}')
     return render(request, 'products/products.html', context)
 
 
