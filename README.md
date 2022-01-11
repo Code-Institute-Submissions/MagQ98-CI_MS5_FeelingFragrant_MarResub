@@ -112,13 +112,14 @@ Features
 <li>Allows users to sign in/out of their account</li>
 <li>Allows users to make secure purchases and view their purchase history</li>
 </ul>
-<img src="media/images/signup.JPG" alt="Sign Out" style="max-width:100%;">
+<img src="media/images/signin.JPG" alt="Sign In" style="max-width:100%;">
 
 ### Log In
 <ul>
 <li>Allows users to create a profile and sign in</li>
 </ul>
-<img src="media/images/signin.JPG" alt="Sign In" style="max-width:100%;">
+<img src="media/images/signup.JPG" alt="Sign Out" style="max-width:100%;">
+
 
 ### Product page
 <ul>
