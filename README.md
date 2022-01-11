@@ -67,23 +67,23 @@ Design
 </details>
 <details>
 <summary>Product page</summary>
-<img src="../media/images/products2.JPG" width="100%">
+<img src="media/images/products2.JPG" width="100%">
 </details>
 <details>
 <summary>Sign In page</summary>
-<img src="media/images/signin2.JPG" width="100%">
-</details>
-<details>
-<summary>Sign Up page</summary>
 <img src="media/images/signup2.JPG" width="100%">
 </details>
 <details>
+<summary>Sign Up page</summary>
+<img src="media/images/signin2.JPG" width="100%">
+</details>
+<details>
 <summary>Check out page</summary>
-<img src="media/images/checkout.JPG" width="100%">
+<img src="media/images/checkout2.JPG" width="100%">
 </details>
 <details>
 <summary>Shopping Bag</summary>
-<img src="media/images/shoppingbag.JPG" width="100%">
+<img src="media/images/shoppingbag2.JPG" width="100%">
 </details>
 
 Features
@@ -112,8 +112,8 @@ Features
 <li>Allows users to sign in/out of their account</li>
 <li>Allows users to make secure purchases and view their purchase history</li>
 </ul>
-<img src="media/images/signinpage.JPG" alt="Sign In" style="max-width:100%;">
-<img src="media/images/signoutpage.JPG" alt="Sign Out" style="max-width:100%;">
+<img src="media/images/signin.JPG" alt="Sign In" style="max-width:100%;">
+<img src="media/images/signout.JPG" alt="Sign Out" style="max-width:100%;">
 
 ### Product page
 <ul>
