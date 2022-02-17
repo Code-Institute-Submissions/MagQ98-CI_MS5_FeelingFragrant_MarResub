@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category
-from .forms import ProductForm
+from .forms import ProductForm, CommentForm
 
 # Create your views here.
 
@@ -63,8 +63,23 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    comment_form = CommentForm(data=request.POST or None)
+    comments = Product.objects.filter()
+
+    if comment_form.is_valid():
+        comment_form.instance.email = request.user.email
+        comment_form.instance.name = request.user.username
+        comment = comment_form.save(commit=False)
+        comment.post = product
+        comment.save()
+    else:
+        comment_form = CommentForm()
+
     context = {
         'product': product,
+        'comments': comments,
+        'commented': True,
+        'comment_form': comment_form,
     }
 
     return render(request, 'products/product_detail.html', context)
