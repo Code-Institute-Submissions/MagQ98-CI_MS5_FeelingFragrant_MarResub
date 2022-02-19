@@ -1,6 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import User
-
 
 class Category(models.Model):
     class Meta:
@@ -31,7 +29,7 @@ class Product(models.Model):
 
 class Comment(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="comments")
-    name = models.CharField(max_length=80)
+    user = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
@@ -41,4 +39,4 @@ class Comment(models.Model):
         ordering = ["created_on"]
 
     def __str__(self):
-        return f"Comment {self.body} by {self.name}"
+        return f"Comment {self.body} by {self.user}"
