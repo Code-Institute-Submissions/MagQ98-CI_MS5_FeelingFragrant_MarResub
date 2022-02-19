@@ -375,7 +375,7 @@ input[name='q']::placeholder {
     }
 }
 
-/* Footer by https://codepen.io/scanfcode/pen/MEZPNd*/
+/* Footer CSS by https://codepen.io/scanfcode/pen/MEZPNd*/
 
 .site-footer
 {
@@ -422,11 +422,11 @@ input[name='q']::placeholder {
 }
 .footer-links a
 {
-  color:#737373
+  color:#737373;
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
-  color:#3366cc;
+  color: white;
   text-decoration:none;
 }
 .footer-links.inline li
@@ -527,7 +527,7 @@ input[name='q']::placeholder {
 {
   background-color:#007bb6
 }
-.social-icons a.dribbble:hover
+.social-icons a.instagram:hover
 {
   background-color:#ea4c89
 }

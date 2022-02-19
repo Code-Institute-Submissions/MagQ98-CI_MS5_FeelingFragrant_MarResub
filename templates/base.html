@@ -15,6 +15,7 @@
     {% endblock %}
 
     {% block corecss %}
+        <link rel="icon" type="image/png" href="media/perfume.png">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Roboto:wght@300&family=Waterfall&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -143,25 +144,33 @@
     </script>
     {% endblock %}
 
-    <!-- Site footer -->
+    <!-- Footer from https://codepen.io/scanfcode/pen/MEZPNd?editors=1100 -->
     <footer class="site-footer">
         <div class="container">
           <div class="row">
             <div class="col-sm-12 col-md-6">
-              <h6>About</h6>
-              <p class="text-justify">We are a group that likes to support local Irish businesses and smell nice while doing it.</p>
-              <p class="text-justify">We aim to showcase and sell some of the best homemade fragrances found around Ireland</p>
+              <h6>About Us</h6>
+              <p class="text-justify">We are a group that likes to support local Irish businesses and smell nice while doing it.
+                <br>We aim to showcase and sell some of the best homemade fragrances found around Ireland
+              </p>
             </div>
   
             <div class="col-xs-6 col-md-3">
               <h6>Categories</h6>
               <ul class="footer-links">
-                <li><a href="http://scanfcode.com/category/c-language/">Waxmelts</a></li>
-                <li><a href="http://scanfcode.com/category/front-end-development/">Candles</a></li>
-                <li><a href="http://scanfcode.com/category/back-end-development/">Eau de Parfum</a></li>
-                <li><a href="http://scanfcode.com/category/java-programming-language/">Eau de Toilette</a></li>
-                <li><a href="http://scanfcode.com/category/java-programming-language/">Special Offers</a></li>
+                <li><a href="{% url 'products' %}?category=wax_melts">Waxmelts</a></li>
+                <li><a href="{% url 'products' %}?category=candles">Candles</a></li>
+                <li><a href="{% url 'products' %}?category=eau_de_parfum">Eau de Parfum</a></li>
+                <li><a href="{% url 'products' %}?category=eau_de_toilette">Eau de Toilette</a></li>
               </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Other</h6>
+                <ul class="footer-links">
+                  <li><a href='#'>Contact Us</a></li>
+                </ul>
+              </div>
             </div>
           </div>
           <hr>
@@ -175,10 +184,10 @@
   
             <div class="col-md-4 col-sm-6 col-xs-12">
               <ul class="social-icons">
-                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                <li><a target="_blank" class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                <li><a target="_blank" class="twitter" href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                <li><a target="_blank" class="instagram" href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                <li><a target="_blank" class="linkedin" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>   
               </ul>
             </div>
           </div>
