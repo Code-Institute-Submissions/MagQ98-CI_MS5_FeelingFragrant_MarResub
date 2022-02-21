@@ -135,9 +135,8 @@ Features
 
 ### Future features to implement
 <ul>
-<li>Plans to add a footer to create accessibility between the store and its different social media channels</li>
-<li>Plans to create a business on facebook with links to the site and products</li>
-<li>Plans to create a review option for all products</li>
+<li>Plans to create a Contact Us page so shoppers can ask any questions they have or even recommend products for the site</li>
+<li>Plans to create a like option for all products</li>
 <li>Plans to include a comment section for users to share their opinions on products</li>
 </ul>
 
@@ -176,8 +175,8 @@ Testing
 Bugs
 ======
 
-<p>When I deployed my project through Heroku, It created an issue where the homepage is able to load but you cant access any of the products pages anymore as you get a server 500 error</p>
-<p>I have not been able to find a resolution to this problem</p>
+<p>When I deployed my project through Heroku, It created an issue where the some of the css doesnt load, due to time constraints I was not able to fix this issue</p>
+<p>The Contact Us Page, Comment and Like models are incomplete</p>
 <p>When running the server through gitpod, no images appear</p>
 
 Deployment
@@ -200,6 +199,11 @@ The live link can be found here - https://feeling-fragrant.herokuapp.com/
 Credits
 ======
 
+### Tutorials Followed
+
+<p>Contact Us Page: https://www.youtube.com/watch?v=sGQSz22U8VM&ab_channel=EasyTutorials</p>
+<p>Footer: https://codepen.io/scanfcode/pen/MEZPNd</p>
+
 ### Content and Media
 
 <p>https://burrenperfumery.com/</p>
@@ -208,5 +212,4 @@ Credits
 
 ### Acknowledgements
 
-While making this project, I heavily relied on the tutorials provided by Code Institute, specifically the Boutique Ado tutorial
-I would like to thank my mentor and tutor for continuous helpful feedback
+While making this project, I heavily relied on the tutorials provided by Code Institute, specifically the Boutique Ado tutorial and many other tutorials found online
