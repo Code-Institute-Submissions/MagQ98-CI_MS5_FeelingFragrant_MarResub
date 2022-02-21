@@ -175,6 +175,7 @@ Testing
 Bugs
 ======
 
+<p>When the app is deployed through heroku the admin sign in wont work but it does when deployed locally, I have not been able to find a fix for this</p>
 <p>When I deployed my project through Heroku, It created an issue where the some of the css doesnt load, due to time constraints I was not able to fix this issue</p>
 <p>The Contact Us Page, Comment and Like models are incomplete</p>
 <p>When running the server through gitpod, no images appear</p>
