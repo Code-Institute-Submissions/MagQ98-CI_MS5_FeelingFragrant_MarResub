@@ -3,7 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from .models import Product, Category
 from .forms import ProductForm, CommentForm
 
@@ -58,28 +59,52 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
+def LikeView(request, pk):
+    product = get_object_or_404(Product, id=request.POST.get('product_id'))
+    liked = False
+    if product.likes.filter(id=request.user.id).exists():
+        product.likes.remove(request.user)
+        liked = False
+    else:
+        product.likes.add(request.user)
+        liked = True
+
+    return HttpResponseRedirect(reverse('product_detail', args=[str(pk)]))
+
+
 def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    comments = product.comments.filter(approved=True)
+    commented = None
+    object = get_object_or_404(Product, id=product_id)
+    total_likes = object.total_likes()
 
-    comment_form = CommentForm(data=request.POST or None)
-    comments = Product.objects.filter()
-
-    if comment_form.is_valid():
-        comment_form.instance.email = request.user.email
-        comment_form.instance.name = request.user.username
-        comment = comment_form.save(commit=False)
-        comment.post = product
-        comment.save()
+    liked = False
+    if object.likes.filter(id=request.user.id).exists():
+        liked = True
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST or None)
+        if comment_form.is_valid():
+            comment_form.instance.email = request.user.email
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.product = product
+            comment.user = request.user
+            comment.email = comment_form.instance.email
+            commented = True
+            comment.save()
     else:
         comment_form = CommentForm()
 
     context = {
         'product': product,
         'comments': comments,
-        'commented': True,
+        'commented': commented,
         'comment_form': comment_form,
+        'total_likes' : total_likes,
+        'liked':liked
     }
 
     return render(request, 'products/product_detail.html', context)
