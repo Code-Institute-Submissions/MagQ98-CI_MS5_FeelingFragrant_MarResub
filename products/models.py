@@ -36,8 +36,7 @@ class Product(models.Model):
 
 class Comment(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="comments")
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user", default="none")
-    # name = models.CharField(max_length=80)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user")
     email = models.EmailField()
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+sitemap: https://feeling-fragrant.herokuapp.com/sitemap.xml
