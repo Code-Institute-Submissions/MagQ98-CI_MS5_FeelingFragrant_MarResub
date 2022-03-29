@@ -61,13 +61,13 @@ def all_products(request):
 
 def LikeView(request, pk):
     product = get_object_or_404(Product, id=request.POST.get('product_id'))
-    liked = False
+    likes = False
     if product.likes.filter(id=request.user.id).exists():
         product.likes.remove(request.user)
-        liked = False
+        likes = False
     else:
         product.likes.add(request.user)
-        liked = True
+        likes = True
 
     return HttpResponseRedirect(reverse('product_detail', args=[str(pk)]))
 
@@ -81,9 +81,9 @@ def product_detail(request, product_id):
     object = get_object_or_404(Product, id=product_id)
     total_likes = object.total_likes()
 
-    liked = False
+    likes = False
     if object.likes.filter(id=request.user.id).exists():
-        liked = True
+        likes = True
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST or None)
         if comment_form.is_valid():
@@ -103,8 +103,8 @@ def product_detail(request, product_id):
         'comments': comments,
         'commented': commented,
         'comment_form': comment_form,
-        'total_likes' : total_likes,
-        'liked':liked
+        'total_likes': total_likes,
+        'likes': likes,
     }
 
     return render(request, 'products/product_detail.html', context)
