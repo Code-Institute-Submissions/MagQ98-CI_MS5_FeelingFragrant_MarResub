@@ -190,6 +190,7 @@ Bugs
 <p>When the app is deployed through heroku the admin sign in wont work but it does when deployed locally, I have not been able to find a fix for this</p>
 <p>The Contact Us Page is incomplete</p>
 <p>Stripe payments stopped working at an unknown point in development, after reviewing with my peers this seems to be a common issue after deployment to heroku.</p>
+<p>Right before submiting I developed a bug where the admin credentials throw a server 500 error when trying to log in with the credentials on heroku </p>
 
 Deployment
 ======
