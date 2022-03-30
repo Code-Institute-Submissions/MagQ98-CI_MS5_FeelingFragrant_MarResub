@@ -97,15 +97,15 @@
                       <form class="" action="{% url 'like_product' product.pk %}" method="POST">
                         {% csrf_token %}
                         {% if liked %}
-                        <button type="submit" style="font-weight: bold" name ="product_id" value = {{product.id}} class="btn btn-danger"><i class="fa fa-thumbs-down"></i> unlike this product</button>
+                        <button type="submit" style="font-weight: bold" name ="product_id" value = {{product.id}} class="btn btn-danger"><i class="fa fa-thumbs-down"></i></button>
                         {% else %}
-                        <button type="submit" style="font-weight: bold" name ="product_id" value = {{product.id}} class="btn btn-light"><i class="fa fa-thumbs-up" aria-hidden="true"></i> like this product</button>
+                        <button type="submit" style="font-weight: bold" name ="product_id" value = {{product.id}} class="btn btn-light"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
                         {% endif %}
                        </form>
                        {% else %}
                        <span><a style="color: blue" href="{% url 'account_login' %}">Login </a>to like this product.</span><br>
                        {% endif %}
-                       <span style="font-weight: bold">Number of likes: {{total_likes}} likes</span>
+                       <span style="font-weight: bold">Likes: {{total_likes}}</span>
                       <hr>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
                     {% with comments.count as total_comments %}
                     <strong class="text-secondary"><i class="far fa-comments"></i>
                         <!-- Our total_comments variable goes before the closing strong tag -->
-                        Number of comments: {{ total_comments }}</strong>
+                        Comments: {{ total_comments }}</strong>
                     {% endwith %}
                 </div>
                 <div class="row">

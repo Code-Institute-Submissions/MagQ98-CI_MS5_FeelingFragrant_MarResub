@@ -1,6 +1,6 @@
 # Feeling Fragrant
 
-My sincere apologies for the fact that this is incomplete. It is a work in progress and unfortunately due to time constraints and some other circumstances it is still very basic and contains errors in places but I decided to submit and receive some feedback for the future. Thank you for your time.
+Feeling fragrant is a site aimed to promote homemade frangrances created by people in Ireland
 
 User Experience
 ======
@@ -135,9 +135,7 @@ Features
 
 ### Future features to implement
 <ul>
-<li>Plans to create a Contact Us page so shoppers can ask any questions they have or even recommend products for the site</li>
-<li>Plans to create a like option for all products</li>
-<li>Plans to include a comment section for users to share their opinions on products</li>
+<li>Plans to create a Suggestions page so shoppers can recommend any products they like for the site</li>
 </ul>
 
 Technologies Used
@@ -170,32 +168,83 @@ Technologies Used
 Testing
 ======
 
-<p>Due to time constraints I was not able to fully test this project</p>
+## CSS
+
+<p>No errors were found when ran through the W3C CSS validator https://validator.w3.org/></p>
+
+## HTML
+
+<p>Some errors were found when running through the W3C HTML validator https://validator.w3.org/ but nothing that would affect how the code works</p>
+
+## Python
+
+<p>Some errors were found when running through the PEP8 Python validator http://pep8online.com/ but they couldnt be fixed because splitting the line would have broken the code</p>
+
+## Javascript
+
+<p>Some minor errors were found while running through the JShint Javascript validator https://jshint.com/ but only those related to ES6</p>
 
 Bugs
 ======
 
 <p>When the app is deployed through heroku the admin sign in wont work but it does when deployed locally, I have not been able to find a fix for this</p>
-<p>When I deployed my project through Heroku, It created an issue where the some of the css doesnt load, due to time constraints I was not able to fix this issue</p>
-<p>The Contact Us Page, Comment and Like models are incomplete</p>
-<p>When running the server through gitpod, no images appear</p>
+<p>The Contact Us Page is incomplete</p>
+<p>Stripe payments stopped working at an unknown point in development, after reviewing with my peers this seems to be a common issue after deployment to heroku.</p>
 
 Deployment
 ======
 
 The website was deployed using Heroku using the following steps:
 
-<p>Use the "pip freeze -> requiremnts.txt" command in the terminal</p>
-<p>Create a Heroku account</p>
-<p>Click the New button in the upper right corner and select "create new app"</p>
-<p>Choose a unique app name, region and click "Create app"</p>
-<p>Go to the Settings tab, add the heroku/python buildpack</p>
-<p>Go to the "deploy" tab and pick GitHub as a deployment method</p>
-<p>Search for a repository to connect to</p>
-<p>Go to the manual deploy section and click the "Deploy Branch" button</p>
-<p>Wait for the app to build and then click on the "View" link</p>
+### Requirements and Procfile
 
-The live link can be found here - https://feeling-fragrant.herokuapp.com/
+<p>Heroku needs to know which technologies are being used and any requirements, so I created files to let it know. Before creating the Heroku app, create these files using the following steps in GitPod:</p>
+
+<ul>
+<li>In the GitPod terminal, type pip3 freeze --local > requirements.txt to create your requirements file.</li>
+<li>Create your Procfile and insert the following code: web: gunicorn ARTstop.wsgi:application and make sure there is no additional blank line after it.</li>
+<li>Push these files to your repository.</li>
+</ul>
+
+### Creating Heroku App
+
+<ul>
+<li>Log into Heroku</li>
+<li>Select 'Create New App' from your dashboard</li>
+<li>Choose an app name (if there has been an app made with that name, you will be informed and will need to choose an alternative)</li>
+<li>Select the appropriate region based on your location</li>
+<li>Click 'Create App'</li>
+</ul>
+
+### Connecting to GitHub
+
+<ul>
+<li>From the dashboard, click the 'Deploy' tab towards the top of the screen</li>
+<li>From here, locate 'Deployment Method' and choose 'GitHub'</li>
+<li>rom the search bar newly appeared, locate your repository by name</li>
+<li>When you have located the correct repository, click 'Connect'</li>
+<li>DO NOT CLICK 'ENABLE AUTOMATIC DEPLOYMENT': This can cause unexpected errors before configuration.</li>
+</ul>
+
+### Environment Variables
+
+<ul>
+<li>Click the 'Settings' tab towards the top of the page</li>
+<li>Locate the 'Config Vars' and click 'Reveal Config Vars'</li>
+<li>Add the necessary variables</li>
+</ul>
+
+### In Heroku.com:
+
+<ul>
+<li>From the dashboard, click the 'Deploy' tab towards the top of the screen</li>
+<li>From here, locate 'Deployment Method' and choose 'GitHub'</li>
+<li>From the search bar newly appeared, locate your repository by name</li>
+<li>When you have located the correct repository, click 'Connect'</li>
+<li>DO NOT CLICK 'ENABLE AUTOMATIC DEPLOYMENT': This can cause unexpected errors before configuration.</li>
+<li>Underneath, locate 'Manual Deploy'; choose the main branch and click 'Deploy Branch'</li>
+<li>Once the app is built (it may take a few minutes), click 'Open App' from the top of the page</li>
+</ul>
 
 Credits
 ======
